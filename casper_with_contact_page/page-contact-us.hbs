@@ -1,0 +1,54 @@
+{{!< default}}
+
+{{! This is a page template. A page outputs content just like any other post, and has all the same
+    attributes by default, but you can also customise it to behave differently if you prefer. }}
+
+{{! Everything inside the #post tags pulls data from the page }}
+{{#post}}
+
+<header class="main-header post-head {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}">
+    <nav class="main-nav {{#if image}}overlay{{/if}} clearfix">
+        {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>{{/if}}
+        {{#if @blog.navigation}}
+            <a class="menu-button icon-menu" href="#"><span class="word">Menu</span></a>
+        {{/if}}
+    </nav>
+</header>
+
+<main class="content" role="main">
+    <article class="{{post_class}}">
+
+        <header class="post-header">
+            <h1 class="post-title">{{title}}</h1>
+        </header>
+
+        <section class="post-content">
+            {{content}}
+
+            <div id="wufoo-z13ww7if11otvvn">
+            Fill out my <a href="https://kezzb.wufoo.com/forms/z13ww7if11otvvn">online form</a>.
+            </div>
+            <div id="wuf-adv" style="font-family:inherit;font-size: small;color:#a7a7a7;text-align:center;display:block;">Online contact and registration forms from <a href="http://www.wufoo.com">Wufoo</a>.</div>
+            <script type="text/javascript">var z13ww7if11otvvn;(function(d, t) {
+            var s = d.createElement(t), options = {
+            'userName':'kezzb',
+            'formHash':'z13ww7if11otvvn',
+            'autoResize':true,
+            'height':'437',
+            'async':true,
+            'host':'wufoo.com',
+            'header':'show',
+            'ssl':true};
+            s.src = ('https:' == d.location.protocol ? 'https://' : 'http://') + 'www.wufoo.com/scripts/embed/form.js';
+            s.onload = s.onreadystatechange = function() {
+            var rs = this.readyState; if (rs) if (rs != 'complete') if (rs != 'loaded') return;
+            try { z13ww7if11otvvn = new WufooForm();z13ww7if11otvvn.initialize(options);z13ww7if11otvvn.display(); } catch (e) {}};
+            var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s, scr);
+            })(document, 'script');</script>
+
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15280.425410611257!2d-3.0079794!3d16.77138355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xe17ce977cbc8733%3A0x546f01bc8958b7c6!2sTimbuktu%2C+Mali!5e0!3m2!1sen!2sau!4v1441798273715" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </section>
+
+    </article>
+</main>
+{{/post}}
